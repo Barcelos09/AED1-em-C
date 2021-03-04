@@ -1,8 +1,8 @@
 /*
-Nome : João Pedro Barcelos Lacerda
+Nome : JoÃ£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
-Comentarios : Não consegui realizar o programa exigido, só consegui transformar o número de in-fixo para pós-fixo
+Comentarios : NÃ£o consegui realizar o programa exigido, sÃ³ consegui transformar o nÃºmero de in-fixo para pÃ³s-fixo
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,7 +52,7 @@ int main () {
 	minhapilha = nova();
 	int i, k=0, tam, cont=0;
 	if(minhapilha == NULL) {
-		printf("Erro na alocação da pilha");
+		printf("Erro na alocaÃ§Ã£o da pilha");
 		return 1;
 	}
 	gets(Prefix);
