@@ -1,5 +1,5 @@
 /*
-Nome : João Pedro Barcelos Lacerda
+Nome : JoÃ£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
 */
@@ -21,21 +21,21 @@ PLista inicializa_lista() {
 
 PLista Insere_ord (PLista l, int codigo, char *nome, float valor) {
 	PLista novo; //novo elemento
-	PLista ant = NULL; //ponteiro auxiliar para a posição anterior
+	PLista ant = NULL; //ponteiro auxiliar para a posiÃ§Ã£o anterior
 	PLista ptaux = l; //ponteiro auxiliar para percorrer a lista
 	/*aloca um novo nodo */
 	novo = (TLista*) malloc(sizeof(TLista));
-	/*insere a informação no novo nodo*/
+	/*insere a informaÃ§Ã£o no novo nodo*/
 	novo->info_codigo = codigo;
 	strcpy(novo->info_nome, nome);
 	novo->info_valor = valor;
-	/*procurando a posição de inserção*/
+	/*procurando a posiÃ§Ã£o de inserÃ§Ã£o*/
 	while ((ptaux!=NULL) && (ptaux->info_codigo)<codigo) {
 		ant = ptaux;
 		ptaux = ptaux->prox;
 	}
 	/*encadeia o elemento*/
-	if (ant == NULL) { /*o anterior não existe, será inserido na 1a posição*/
+	if (ant == NULL) { /*o anterior nÃ£o existe, serÃ¡ inserido na 1a posiÃ§Ã£o*/
 		novo->prox = l;
 		l = novo;
 	} else { /*elemento inserido no meio da lista*/
@@ -66,7 +66,7 @@ PLista retira (PLista l, char v[]) {
 	}
 	/* verifica se achou elemento */
 	if (p == NULL)
-		return l; /* não achou: retorna lista original */
+		return l; /* nÃ£o achou: retorna lista original */
 	/* retira elemento */
 	if (ant == NULL)
 		/* retira elemento do inicio */
@@ -81,9 +81,9 @@ PLista retira (PLista l, char v[]) {
 void libera (PLista l) {
 	PLista p = l, t;
 	while (p != NULL) {
-		t = p->prox; /* guarda referência para o próximo elemento*/
+		t = p->prox; /* guarda referÃªncia para o prÃ³ximo elemento*/
 		free(p);
-		p = t; /* faz p apontar para o próximo */
+		p = t; /* faz p apontar para o prÃ³ximo */
 	}
 }
 int main () {
