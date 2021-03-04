@@ -1,9 +1,9 @@
 /*
 
-Nome : Jo„o Pedro Barcelos Lacerda
+Nome : Jo√£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
-Comentarios : Adicionado comentarios nas linhas: 15, 20 e 30, referentes a verificaÁ„o de erros  e um comentario na linha 26, referente a logica utilizada.
+Comentarios : Adicionado comentarios nas linhas: 15, 20 e 30, referentes a verifica√ß√£o de erros  e um comentario na linha 26, referente a logica utilizada.
 
 */
 #include <stdio.h>
@@ -14,22 +14,22 @@ int main(){
 	printf("Insira a quantidade de candidatos\n");
 	scanf("%d", &qtd);
 	if(qtd<1){
-		printf("Quantidade invalida de candidatos!, finalizando o programa."); //VerificaÁ„o de erros
+		printf("Quantidade invalida de candidatos!, finalizando o programa."); //Verifica√ß√£o de erros
 		return 0;
 	}
 	vet = (int *) calloc(qtd,sizeof(int));
 	if(vet == NULL){
-		printf("Erro na alocaÁao"); //VerificaÁ„o de erros
+		printf("Erro na aloca√ßao"); //Verifica√ß√£o de erros
 		return 0;
 	}
 	while(1){
 		printf("Insira seu voto\n"); 
 		scanf("%d", &voto);
-		if(voto<=0){ // Na teoria,  0 n„o È um numero inteiro negativo, porÈm resolvi fazer dessa forma, visto que n„o existiria candidato 0.
+		if(voto<=0){ // Na teoria,  0 n√£o √© um numero inteiro negativo, por√©m resolvi fazer dessa forma, visto que n√£o existiria candidato 0.
 			break;
 		}
 		if(voto>qtd){
-			printf("Candidato inexistente!\n"); //VerificaÁ„o de erros
+			printf("Candidato inexistente!\n"); //Verifica√ß√£o de erros
 		}
 		else{
 			voto--;
