@@ -1,8 +1,8 @@
 /*
-Nome : Jo„o Pedro Barcelos Lacerda
+Nome : Jo√£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
-Comentarios : Realizei ordenaÁ„o de vetores, e utilizei as filas para imprimir a lista de candidatos convocados, Utilizei 2 filas para n„o modificar a funÁ„o retira, pois a mesma sÛ retira o primeiro da fila,
+Comentarios : Realizei ordena√ß√£o de vetores, e utilizei as filas para imprimir a lista de candidatos convocados, Utilizei 2 filas para n√£o modificar a fun√ß√£o retira, pois a mesma s√≥ retira o primeiro da fila,
 logo, criei outra fila para receber o ID dos candidatos que responderam Sim.
 */
 #include <stdio.h>
@@ -18,21 +18,21 @@ typedef struct {
 
 typedef TFila *PFila ;
 
-PFila cria_fila() { //FunÁ„o dos Slides
+PFila cria_fila() { //Fun√ß√£o dos Slides
 	PFila fila = (PFila) malloc (sizeof (TFila));
 	fila->n = 0;
 	fila->ini = 0;
 	return (fila);
 }
 
-int incr_indice(int i) { //FunÁ„o dos Slides
+int incr_indice(int i) { //Fun√ß√£o dos Slides
 	if (i==MAX_FILA-1)
 		return 0;
 	else
 		return i+1;
 }
 
-int insere (PFila p, int *val) { //FunÁ„o dos Slides
+int insere (PFila p, int *val) { //Fun√ß√£o dos Slides
 	int fim;
 	if (p==NULL) {
 		printf("Fila nao inicializada!\n");
@@ -48,7 +48,7 @@ int insere (PFila p, int *val) { //FunÁ„o dos Slides
 	return 0;
 }
 
-int retira (PFila p, int* val) { //FunÁ„o dos Slides
+int retira (PFila p, int* val) { //Fun√ß√£o dos Slides
 	if (p==NULL) {
 		printf("Fila nao inicializada!\n");
 		return -1;
@@ -80,7 +80,7 @@ int main() {
 	for(i=0; i<qtd; i++) {
 		printf("\nNumero Identificador do candidato:\nNota do candidato: \n");
 		scanf("%d %d", &id[i], &notas[i]);
-		printf("Candidato Inserido\n"); //Optei por Inserir os candidatos posteriormente, apÛs ordenar as notas
+		printf("Candidato Inserido\n"); //Optei por Inserir os candidatos posteriormente, ap√≥s ordenar as notas
 	}
 	for(i=0; i<qtd; i++) { // Ordenar em ordem crescente
 		for(k=i+1; k<qtd; k++) {
@@ -93,7 +93,7 @@ int main() {
 				id[k]=aux[1];
 			}
 		}
-		insere(fila, id[i]); //Insere na fila os ID's j· de forma ordenada
+		insere(fila, id[i]); //Insere na fila os ID's j√° de forma ordenada
 	}
 	printf("\n -IMPRESSAO DA FILA- \n");
 	for(i=0; i<qtd; i++) {
@@ -102,9 +102,9 @@ int main() {
 	for(i=0, k=0; (i!=qtd) && (k!=vagas); i++) {
 		printf("Resposta do candidato, cujo ID e : %d (S/N) \n", id[i]);
 		scanf("%s", resp);
-		if(stricmp(resp, "n") == 0) { //Se o candidato responder n„o, seu ID sÛ ser· retirado da fila
+		if(stricmp(resp, "n") == 0) { //Se o candidato responder n√£o, seu ID s√≥ ser√° retirado da fila
 			retira(fila, &val);
-		} else { //Caso o candidato responda Sim, seu ID ser· retirado da fila e inserido em outra fila, essa que contÈm somente os candidatos que ser„o chamados
+		} else { //Caso o candidato responda Sim, seu ID ser√° retirado da fila e inserido em outra fila, essa que cont√©m somente os candidatos que ser√£o chamados
 			retira(fila, &val);
 			insere(fila2, val);
 			k++;
