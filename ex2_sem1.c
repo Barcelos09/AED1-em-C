@@ -1,7 +1,8 @@
 /*
-Nome: Jo�o Pedro Barcelos Lacerda
+Nome: João Pedro Barcelos Lacerda
 RA: 140977
 email: joao.lacerda09@unifesp.br
+Comentarios: Função que lê, nome, idade e altura, com alocação dinamica e funções
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +21,7 @@ int main(){
 pessoa *Pessoas;
 Pessoas = (pessoa*)malloc(sizeof(pessoa));
 if (Pessoas == NULL){
-	printf("Erro na aloca��o");
+	printf("Erro na alocação");
 	return 1;
 }
 printf("Digite \n Nome: \n Idade: \n Altura: \n");
