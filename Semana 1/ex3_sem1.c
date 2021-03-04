@@ -1,5 +1,5 @@
 /*
-Nome: Jo„o Pedro Barcelos Lacerda
+Nome: Jo√£o Pedro Barcelos Lacerda
 RA: 140977
 email: joao.lacerda09@unifesp.br
 */
