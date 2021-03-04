@@ -1,26 +1,26 @@
 /*
-Nome : Jo„o Pedro Barcelos Lacerda
+Nome : Jo√£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
-Comentarios : Consegui produzir o programa proposto, porÈm, com muita dificuldade.
+Comentarios : Consegui produzir o programa proposto, por√©m, com muita dificuldade.
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 typedef struct lista {
-	int info;	// InformaÁ„o do jogador, padr„o como contagem
-	int soma;	// Soma de suas pontuaÁıes a cada carta
+	int info;	// Informa√ß√£o do jogador, padr√£o como contagem
+	int soma;	// Soma de suas pontua√ß√µes a cada carta
 	struct lista* prox;
 } TLista;
 typedef TLista *PLista;
 
-void imprime_circular (PLista ultimo) { //Impress„o a cada rodada
+void imprime_circular (PLista ultimo) { //Impress√£o a cada rodada
 	PLista p;
 	if (ultimo !=NULL) {
 		p = ultimo->prox;
-		/* percorre os elementos atÈ alcanÁar novamente o
-		inÌcio */
+		/* percorre os elementos at√© alcan√ßar novamente o
+		in√≠cio */
 		printf("Situacao da lista: \n");
 		do {
 			printf("Jogador = %d	", p->info);
@@ -46,7 +46,7 @@ PLista Pop(PLista ultimo, PLista p) { //Retira elemento da lista circular
 	return ultimo;
 }
 
-PLista Push (PLista ultimo, int val) {	//FunÁ„o utilizada para criar a lista
+PLista Push (PLista ultimo, int val) {	//Fun√ß√£o utilizada para criar a lista
 	PLista novo = (PLista) malloc (sizeof(TLista));
 	novo->info = val;
 	if (ultimo == NULL) {
@@ -91,13 +91,13 @@ int main() {
 	while(qtd>1) {
 		printf("Digite uma carta (numero de 2 a 9 ou as letras A,J,K ou Q):");
 		scanf("%s", carta);
-		if(strcmp(carta,"A")==0) {	//TranformaÁ„o da letra A pelo seu valor equivalente
+		if(strcmp(carta,"A")==0) {	//Tranforma√ß√£o da letra A pelo seu valor equivalente
 			strcpy(carta, "11");
 		}
-		if(strcmp(carta, "J")==0 || strcmp(carta, "K")==0 || strcmp(carta, "Q")==0) {	//TranformaÁ„o da letra J,K,Q pelo seu valor equivalente
+		if(strcmp(carta, "J")==0 || strcmp(carta, "K")==0 || strcmp(carta, "Q")==0) {	//Tranforma√ß√£o da letra J,K,Q pelo seu valor equivalente
 			strcpy(carta, "10");
 		}
-		val = atoi(carta);	//FunÁ„o utilizada para transformar uma string em um valor int, para possibilitar a utilizaÁ„o da funÁ„o switch
+		val = atoi(carta);	//Fun√ß√£o utilizada para transformar uma string em um valor int, para possibilitar a utiliza√ß√£o da fun√ß√£o switch
 		switch(val) {
 			case 11: {
 				p->soma+=11;
@@ -279,7 +279,7 @@ int main() {
 			libera (ultimo);
 			return 0;
 		}
-		if(cont==qtd) {	//Imprime a situaÁ„o da lista a cada rodada
+		if(cont==qtd) {	//Imprime a situa√ß√£o da lista a cada rodada
 			cont=0;
 			p=ultimo->prox;
 			imprime_circular(ultimo);
