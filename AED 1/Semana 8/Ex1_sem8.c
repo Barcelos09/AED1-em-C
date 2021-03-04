@@ -27,13 +27,13 @@ void insere(matriz m, int i,int j) {
 	do {
 		printf("Digite o genero do filme: ");
 		scanf(" %c", &novo->gen);
-		if(novo->gen=='A') break;	//AÇÃO
+		if(novo->gen=='A') break;	//AÃ‡ÃƒO
 		if(novo->gen=='R') break;	//ROMANCE
 		if(novo->gen=='S') break;	//SUSPENSE
 		if(novo->gen=='C') break;	//COMEDIA
 		if(novo->gen=='M') break;	//MUSICAL
 		if(novo->gen=='D') break;	//DRAMA
-		if(novo->gen=='F') break;	//FICÇÃO
+		if(novo->gen=='F') break;	//FICÃ‡ÃƒO
 		if(novo->gen=='P') break;	//POLICIAL
 		printf("\nGenero invalido!!\n\n");
 	} while (aux==0);
@@ -191,7 +191,7 @@ int main( ) {
 		for(j=0; j<aux; j++) { //For para cada filme assistido
 			printf("\nDigite o numero do %do. filme assistido:", j+1);
 			scanf("%d", &num);
-			for(k=0; k<10; k++) { //Teste se o filme é valido
+			for(k=0; k<10; k++) { //Teste se o filme Ã© valido
 				if(num>col || num<=0) {
 					printf("Filme invalido \n Insira o valor correto \n");
 					printf("\nDigite o numero do %do. filme assistido:", j+1);
