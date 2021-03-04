@@ -1,8 +1,8 @@
 /*
-Nome : Jo„o Pedro Barcelos Lacerda
+Nome : Jo√£o Pedro Barcelos Lacerda
 RA : 140977
 Turma : Integral
-Comentarios : Ao realizar o programa me deparei com diversos erros referentes aos ponteiros, na hora de trocar as letras, n„o consegui resolve-los a tempo da entrega do programa, porÈm
+Comentarios : Ao realizar o programa me deparei com diversos erros referentes aos ponteiros, na hora de trocar as letras, n√£o consegui resolve-los a tempo da entrega do programa, por√©m
 em alguns casos, como o exemplo dado, o programa funciona da forma correta.
 */
 #include <stdio.h>
@@ -55,7 +55,7 @@ PLista2 trocaLetras(PLista2 l, char a, char b) {
 			for (k=l; k!=NULL; k=k->prox) {
 				//printf("letra %c com %c \n", b, k->letra);
 				if(k->letra==b) {
-					/*Logica encontrada para realizar a troca de letras dentro da frase, porÈm, com alguns erros, por exemplo, caso a primeira palavra da frase seja trocada,caso troque palavras adjacentes e caso a ultima letra seja trocada,o programa tende a funcionar incorretamente. */
+					/*Logica encontrada para realizar a troca de letras dentro da frase, por√©m, com alguns erros, por exemplo, caso a primeira palavra da frase seja trocada,caso troque palavras adjacentes e caso a ultima letra seja trocada,o programa tende a funcionar incorretamente. */
 					//printf("entrou if");
 					aux=p->prox;
 					aux2=p->ant;
