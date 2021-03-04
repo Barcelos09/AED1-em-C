@@ -1,7 +1,8 @@
 /*
-Nome: Jo„o Pedro Barcelos Lacerda
+Nome: Jo√£o Pedro Barcelos Lacerda
 RA: 140977
 email: joao.lacerda09@unifesp.br
+Comentarios: Escreve em um arquivo nomes, e depois compara, e verifica quantas pessoas tem com aquele nome
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,7 +32,7 @@ char nome[10];
 char comp[10];
 arq = fopen("arquivo.txt", "w");
 if(arq == NULL){
-	printf("Erro na criaÁ„o do arquivo");
+	printf("Erro na cria√ß√£o do arquivo");
 	return 1;
 }
 printf("Digite FIM, para encerrar o processo \n");
