@@ -1,7 +1,8 @@
 /*
-Nome: Jo�o Pedro Barcelos Lacerda
+Nome: João Pedro Barcelos Lacerda
 RA: 140977
 email: joao.lacerda09@unifesp.br
+Comentarios: Programa simples com estrutura, que lê, nome idade e altura, e imprime.
 */
 #include <stdio.h>
 #include <stdlib.h>
